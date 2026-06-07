@@ -1,5 +1,6 @@
 package GDR;
 
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class Main {
                     int forza = tastiera.nextInt();
                     System.out.print("Inserisci resistenza: ");
                     int resistenza = tastiera.nextInt();
-                    squadra[i] = new Guerriero(nome, hp, livello, forza, res, 0);
+                    sfidanti[i] = new Guerriero(nome, hp, livello, forza, resistenza, 0);
                     break;
 
                 case 2: // MAGO
@@ -33,7 +34,7 @@ public class Main {
                     int mana = tastiera.nextInt();
                     System.out.print("Inserisci potere magico: ");
                     int potere = tastiera.nextInt();
-                    squadra[i] = new Mago(nome, hp, livello, mana, potere);
+                    sfidanti[i] = new Mago(nome, hp, livello, mana, potere);
                     break;
 
                 case 3: // MERCANTE
@@ -41,9 +42,11 @@ public class Main {
                     int ricchezza = tastiera.nextInt();
                     System.out.print("Inserisci oggetti in inventario: ");
                     int inventario = tastiera.nextInt();
-                    squadra[i] = new Mercante(nome, hp, livello, ricchezza, inventario);
+                    sfidanti[i] = new Mercante(nome, hp, livello, ricchezza, inventario);
                     break;
+            }
         }
+1
     }
-
 }
+
